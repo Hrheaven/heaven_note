@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditNoteActivity"
+    android:padding="8dp"
+    android:id="@+id/mainLay"
+    android:background="@drawable/background_color"
+    >
+
+    <!-- Title EditText -->
+    <EditText
+        android:id="@+id/edit_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        />
+
+    <!-- Horizontal Layout for Spinners -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/spinners_card"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        android:layout_below="@id/edit_text_title"
+        android:layout_marginTop="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:gravity="center_vertical"
+            android:background="@color/first"
+
+            >
+
+            <!-- Alignment Spinner -->
+            <Spinner
+                android:id="@+id/spinner_text_alignment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Style Spinner -->
+            <Spinner
+                android:id="@+id/text_style_options"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Bullet List Spinner -->
+            <Spinner
+                android:id="@+id/spinner_bullet_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/content_Card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/spinners_card"
+        android:layout_above="@+id/button_save_text"
+        app:cardUseCompatPadding="true"
+        android:backgroundTint="#EFD7FF"
+        >
+
+        <EditText
+            android:id="@+id/edit_text_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="Content"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textSize="16sp"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Content EditText -->
+
+    <!-- Save Button CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/button_save_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <!-- Save Button TextView -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Save"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:background="@color/second"
+            />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

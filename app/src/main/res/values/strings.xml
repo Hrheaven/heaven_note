@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Heaven Note</string>
+
+
+    <string-array name="bullet_list_options">
+        <item>Normal</item>
+        <item>• Bullet</item>
+        <item>1. Numbering</item>
+        <item>> Greater Than</item>
+        <item>- Dash</item>
+    </string-array>
+
+    <string-array name="text_alignment_options">
+        <item>Left</item>
+        <item>Center</item>
+        <item>Right</item>
+    </string-array>
+
+    <string-array name="text_style_options">
+        <item>Normal</item>
+        <item>Bold</item>
+        <item>Italic</item>
+        <item>Underline</item>
+    </string-array>
+
+
+</resources>
